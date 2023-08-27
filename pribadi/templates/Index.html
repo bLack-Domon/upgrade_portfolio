@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>{{ title }}</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="{% static 'dominic-master/images/icon.png' %}" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="{% static 'dominic-master/images/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'dominic-master/css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'dominic-master/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'dominic-master/css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'dominic-master/css/custom.css' %}">
+    <script src="{% static 'dominic-master/js/modernizr.js' %}"></script> <!-- Modernizr -->
+
+</head>
+<body id="page-top" class="politics_version">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div id="main-ld">
+         <div id="loader"></div>
+        </div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+         <img height="10px;" class="img-fluid" src="{% static 'dominic-master/images/me.png' %}"/>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+	<section id="home" class="main-banner parallaxie" style="background: url('https://wallpapercave.com/wp/wp6350578.jpg')">
+	</section>
+
+	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+        <path d="M-5 100 Q 0 20 5 100 Z
+            M0 100 Q 5 0 10 100
+            M5 100 Q 10 30 15 100
+            M10 100 Q 15 10 20 100
+            M15 100 Q 20 30 25 100
+            M20 100 Q 25 -10 30 100
+            M25 100 Q 30 10 35 100
+            M30 100 Q 35 30 40 100
+            M35 100 Q 40 10 45 100
+            M40 100 Q 45 50 50 100
+            M45 100 Q 50 20 55 100
+            M50 100 Q 55 40 60 100
+            M55 100 Q 60 60 65 100
+            M60 100 Q 65 50 70 100
+            M65 100 Q 70 20 75 100
+            M70 100 Q 75 45 80 100
+            M75 100 Q 80 30 85 100
+            M80 100 Q 85 20 90 100
+            M85 100 Q 90 50 95 100
+            M90 100 Q 95 25 100 100
+            M95 100 Q 100 15 105 100 Z">
+        </path>
+    </svg>
+
+    <div id="about" class="section wb">
+        <div class="container">
+            {% for j in d %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">                        
+                        <h2>{{ j.nama }}</h2>
+                        <h3 class="text-dark"><p>{{ j.tentang_diri|safe }}</p></h3>
+
+                        <a href="https://drive.google.com/file/d/1O67m3kgS26lfJDSP3-pXyxY7VYMLoCK8/view?usp=drive_link" class="sim-btn btn-hover-new" data-text="Download CV" target="_blank"><span>Download CV</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="right-box-pro wow fadeIn">
+                        <img width="400px" style="margin-left: 40px;" src="foto/{{ j.foto }}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+            {% endfor %}
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+    <div id="services" class="section lb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Services</h3>
+            </div><!-- end title -->
+
+        <div class="services-container">
+            <div class="row">
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-seo"></i>
+						</div>
+						<h2>Web Development (Pengembangan Website)</h2>
+						<p>Pengembangan Website atau membuat website baru dari awal. Menggunakan Framework terbaru dengan fitur-fitur canggih.</p>
+					</div>
+                </div><!-- end col -->
+                <div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-development"></i>
+						</div>
+						<h2>Responsive Design (Desain Responsif)</h2>
+						<p>Dapat digunakan diberbagai perangkat mulai dari laptop, tablet, dan handphone.</p>
+					</div>
+                </div><!-- end col -->
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-process"></i>
+						</div>
+						<h2>Creative Design (Desain Kreatif)</h2>
+						<p>Menghadirkan nuansa desain yang inovatif, kreatif, dan unik berbeda dengan desain-desain lainnya.</p>
+					</div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div>
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div id="portfolio" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Portfolio</h3>
+            </div><!-- end title -->
+			
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-left">
+						<button class="active custom-btn-filter" data-filter="*">All</button>
+						<button class="custom-btn-filter" data-filter=".{{ 1.kategori }}">Web Development</button>
+						<button class="custom-btn-filter" data-filter=".{{ 2.kategori }}">Creative Design</button>
+						{% comment %} <button data-filter=".{{ 3.kategori }}">Graphic Design</button> {% endcomment %}
+					</div>
+				</div>
+			</div>
+			
+			<div class="gallery-list row">
+                {% for r in p %}
+				<div class="col-md-4 col-sm-6 mr-2 mt-2 gallery-grid {{ r.kategori }} {{ r.kategori_dua }}">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mt-1 text-right" style="margin-right: 16px;">{{r.judul}}</h4>
+                        </div>
+                        <div class="card-body text-right">
+                            <div class="gallery-single fix">
+                                <img src="foto/{{ r.foto_aplikasi }}" class="img-fluid" alt="Image">
+                                <div class="img-overlay">
+                                    <a href="foto/{{ r.foto_aplikasi }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+                                </div>
+                            </div>
+                            <a href="{{ r.link_projek }}" target="_blank" class="btn btn-primary" style="margin-right: 16px;">Source Code</a>
+                        </div>
+                    </div>
+				</div>
+                {% endfor %}
+			</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="contact" class="section db">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Contact</h3>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <div id="contactForm" name="sentMessage" novalidate="novalidate">
+                            
+                        {% for a in d %}
+                        <div class="row grup-sosmed">
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="{{ a.hp }}" target="_blank">
+                                <img class="icon-contact" src="{% static 'wa.png' %}">
+                                <h5 class="text-white mt-2">WhatsApp</h5>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="{{ a.fb }}" target="_blank">
+                                <img class="icon-contact" src="{% static 'fb.png' %}">
+                                <h5 class="text-white mt-2">Facebook</h5>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="{{ a.ig }}" target="_blank">
+                                <img class="icon-contact" src="{% static 'ig.png' %}">
+                                <h5 class="text-white mt-2">Instagram</h5>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="{{ a.github }}" target="_blank">
+                                <img class="icon-contact rounded-circle" src="{% static 'git.png' %}">
+                                <h5 class="text-white mt-2">Github</h5>
+                            </a>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <a href="{{ a.hp }}" target="_blank"><button type="button" class="btn btn-light text-dark">Send Message</button></a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2023 | Design By : M. Ja'far Ilham R</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'dominic-master/js/all.js' %}"></script>
+    <script src="{% static 'dominic-master/js/jquery.mobile.customized.min.js' %}"></script>
+    <script src="{% static 'dominic-master/js/jquery.easing.1.3.js' %}"></script> 
+    <script src="{% static 'dominic-master/js/parallaxie.js' %}"></script>
+    <script src="{% static 'dominic-master/js/headline.js' %}"></script>
+ <!-- Contact form JavaScript -->
+    <script src="{% static 'dominic-master/js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'dominic-master/js/contact_me.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'dominic-master/js/custom.js' %}"></script>
+    <script src="{% static 'dominic-master/js/jquery.vide.js' %}"></script>
+
+</body>
+</html>
